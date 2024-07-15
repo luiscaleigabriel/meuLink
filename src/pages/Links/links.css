@@ -9,11 +9,22 @@
 }
 
 .links_header svg {
+  display: block;
   margin-right: 14px;
+  animation: animate1 1s ease alternate infinite;
 }
 
 .links_header h1 {
   color: #fff;
+}
+
+@keyframes animate1 {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .links_item {
@@ -54,6 +65,11 @@
 .link_delete {
   border: none;
   background: transparent;
+  transition: all .5s ease-in-out;
+}
+
+.link_delete:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 780px) {
