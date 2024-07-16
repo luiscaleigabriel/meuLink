@@ -1,8 +1,16 @@
 import { FiLink } from 'react-icons/fi'
-import './home.css'
+import { useState } from 'react'
 import Menu from '../../components/Menu'
+import './home.css'
+import LinkItem from '../../components/LinkItem'
 
 function Home() {
+  const [link, setLink] = useState('')
+
+  function shortLink() {
+    alert('Link encurtado')
+  }
+
   return (
     <div className="container_home">
       <div className="logo">
@@ -17,14 +25,18 @@ function Home() {
           <input 
             type="text"
             id='link'
+            value={ link }
             placeholder='Cole seu link aqui!'
+            onChange={ (e) => setLink(e.target.value) }
           />
         </label>
 
-        <button>Gerar Link</button>
+        <button onClick={ shortLink }>Gerar Link</button>
       </div>
 
       <Menu />
+
+      <LinkItem />
     </div>
   )
 }

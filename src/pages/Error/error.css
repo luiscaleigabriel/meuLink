@@ -1,0 +1,53 @@
+.error_container {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: #fff;
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error_container h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.error_container img {
+  width: 40%;
+  animation: cheick 1s alternate infinite;
+}
+
+@keyframes cheick {
+  from {
+    transform: translate3d(-1px, 0, 0);
+  }
+  to {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+.btn_error {
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid #132742;
+  border-radius: 2px;
+  background-color:#132742;
+  transition: all .5s ease;
+}
+
+.btn_error:hover {
+  color: #132742;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 450px) {
+  .error_container h1 {
+    font-size: 1rem;
+  }
+}
