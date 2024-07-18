@@ -4,6 +4,16 @@
   padding: 14px;
   width: 700px;
   background-color: #fff;
+  animation: animate 1s ease both;
+}
+
+@keyframes animate {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 .modal_header,
